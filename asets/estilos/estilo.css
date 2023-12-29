@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 150vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px 50px 1fr 50px;
+    grid-template-areas: "zh  zh" "zn  zn" "zs  zs"   "zf  zf";
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+    
+}
+header{
+    grid-area: zh;
+    background-color: rgba(247, 247, 247, 0.753);
+}
+header div{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+   
+    max-height: 100%;
+
+}
+#logo{
+    width: 400px;
+    padding-bottom: 15px;  
+    cursor:auto;
+    
+}
+#logo1{
+    width: 400px;
+    padding-top: auto;
+    cursor:auto;
+    padding-left: 0%;
+
+}
+section{
+    grid-area: zs;
+    background-color: rgba(197, 233, 248, 0.753);
+    /* flex-wrap: wrap;
+    display: flex;
+    justify-content:  space-evenly;   */
+}
+section>div{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content:  space-evenly;
+    margin:0 90px; 
+}
+section> div> div{
+    margin: 10px;
+    background-color: rgba(247, 247, 247, 0.753); 
+    width: 350px;
+    height: 450px;
+    padding-bottom: 80px ;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* border: solid 2px; */
+    
+}
+.carrito{
+    background-color: rgb(112, 182, 182);
+    color: aliceblue;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.carrito:hover{
+    background-color: black;
+    color: azure;
+}
+.precios{
+    font-weight: bold;
+}
+
+.nombre_de_platos{
+    cursor: pointer;
+    text-align: center;
+    
+}
+.nombre_de_categorias{
+    font-size: 35px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+    border: none;
+    background-color: rgba(197, 233, 248, 0.1);
+    box-shadow: none;
+    font-weight: bold;
+   
+    
+}
+img{
+    width: 90%;
+    height: 90%;
+    cursor: pointer;
+    
+}
+
+
+section>div>div>img{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.div_estrellas img{
+    height: 17px;
+    width: auto;
+}
+    
+nav{
+    grid-area: zn;
+    
+    
+    
+}
+
+
+nav ul{
+    
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+nav #menu{
+    list-style: none;
+    background-color: rgb(112, 182, 182);
+    color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+      
+}
+nav li{
+    cursor: pointer;
+    font-size: 20px;
+}
+footer{
+    grid-area: zf;
+    background-color: rgba(139, 8, 8, 0.637);
+}
+
+#botonSubirArriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3f4449;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos de las modales */
+
+.cabecera_modal{
+    background-color: rgb(230, 232, 232);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    top: 10px;
+}
+.logo{
+    position: relative;
+    height: 150px;
+    width: auto;
+    left: 35%;
+    top: 10px;
+    cursor:auto;
+}
+
+.fotos_modales{
+    height: 480px;
+    width: auto;
+    position: absolute;
+    left: 250px;
+    top: 220px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    cursor:auto;
+
+}
+
+.contenido{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    padding: 5px;
+    height: 450px;
+    width: 600px;
+    left: 45%;
+    top: 250px;
+    
+}
+.contenido li{
+    list-style: none;
+    padding-left: 20px;
+}
+.tit_sec{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+.regresar,.regresar1,.regresar2,.regresar3{
+    cursor: pointer;
+    height: 35px;
+    width: auto;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#div_modal_Pack_Cuchara,#div_modal_Pack_Dieta_2,#div_modal_Antiinflamatoria,#div_modal_Pack_Dieta_1{
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height:100% ;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ejemplo de modal */
+#div_modal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height:100% ;
+    background-color: rgb(175, 175, 189);
+    z-index: 10;
+    display: none;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+
